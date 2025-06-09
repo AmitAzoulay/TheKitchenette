@@ -22,7 +22,7 @@ const Login = () => {
             const salt = '$2b$10$' + process.env.REACT_APP_ZHASH
             loginData.password = await bcrypt.hash(password, salt)
 
-            const response = await instance.post(`${process.env.REACT_APP_SERVER_URL}/user/login`, loginData)
+            const response = await instance.post(`${process.env.REACT_APP_SERVER_URL}/user/login`, loginData, { withCredentials: true })
             if (response.status === 200) {
                 await getLoggedIn()
                 await getIsAdmin()

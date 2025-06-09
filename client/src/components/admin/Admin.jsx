@@ -15,7 +15,7 @@ const Admin = () => {
 
         const fetchUsers = async () => {
             try {
-                const usersRes = await instance.get(`/user/getUsers`,{
+                const usersRes = await instance.get(`${process.env.REACT_APP_SERVER_URL}/user/getUsers`,{
                     credentials: "include",
                 })
                 console.log(usersRes)

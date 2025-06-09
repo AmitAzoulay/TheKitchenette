@@ -22,7 +22,7 @@ const Router = () => {
             loggedIn === false && <>
               <Route path="/register" element={<Register></Register>} />
               <Route path="/" element={<Login></Login>} />
-              
+              <Route path="/chat" element={<Chat></Chat>} />
             </>
           }
           {

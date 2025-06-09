@@ -74,13 +74,13 @@ router.post("/login", async (req, res) => {
 router.get("/logout", async (req, res) => {
     res.clearCookie("token", {
     httpOnly: true,
-    secure: true,
+    secure: false,
     path: "/", 
     }).send()
 })
 
 router.get("/loggedIn",boolAuth, async (req, res) => {
-    
+    res.json(true)
 })
 
 router.get("/current", async (req, res) => {

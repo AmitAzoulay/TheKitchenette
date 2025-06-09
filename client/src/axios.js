@@ -5,6 +5,8 @@ const instance = axios.create({
     withCredentials: true,}
 )
 
+instance.defaults.withCredentials = true;
+
 instance.interceptors.response.use(
   res => res,
   err => {

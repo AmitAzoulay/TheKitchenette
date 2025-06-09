@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mern-server-container
-          image: amitazoulay1611/the-kitchenette-server:latest
+          image: amitazoulay1611/thekitchenette-server:latest
           ports:
             - containerPort: 4000
 ---
@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
         - name: mern-client-container
-          image: amitazoulay1611/the-kitchenette-client:latest
+          image: amitazoulay1611/thekitchenette-client:latest
           ports:
             - containerPort: 3000
 ---
